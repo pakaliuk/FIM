@@ -1,0 +1,38 @@
+﻿
+<div asp-validation-summary="All" class="text-danger"></div>
+
+<form class="was-validated" asp-action="CreatePost" method="post">
+
+    <div class=" form-group">
+
+        <input type="hidden" name="topicId" class="form-control" value="@ViewBag.topicId" />
+        
+    </div>
+   
+    <div class="col-md-6">
+        <label for="postHeader" class="form-label">New Post Header</label>
+        <input type="text" class="form-control is-invalid" name="postHeader" id="postHeader" aria-describedby="validationServer03Feedback" required>
+        
+       
+    </div>
+
+    <div class="form-outline mb-4">
+        <label for="postContent" class="form-label">Post Content</label>
+        <textarea class="form-control" id="postContent" name="postContent" rows="10" placeholder="Required example textarea" required></textarea>
+        <div class="invalid-feedback">
+            Please enter a message in the textarea.
+        </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Add Post</button>
+</form>
+
+
+
+
+
+
+
+
+
+

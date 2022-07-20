@@ -1,0 +1,28 @@
+﻿@model FIM.Models.Post
+
+<form asp-action="EditPostById" class="was-validated" method="post">
+
+    @ViewBag.postid
+    <div class=" form-group">
+
+        <input type="hidden" name="postid" class="form-control" value="@ViewBag.postid" />
+
+    </div>
+    <div class="col-md-6">
+        <label for="postHeader" class="form-label">New Post Header</label>
+        <input type="text" class="form-control is-invalid" name="postHeader" id="postHeader" aria-describedby="validationServer03Feedback" required value="@Model.PostHeader" />
+
+
+    </div>
+    <div class="form-outline mb-4">
+        <label for="postContent" class="form-label">Post Content</label>
+        <textarea class="form-control" id="postContent" name="postContent" rows="10" placeholder="Required example textarea" required>@Model.PostContent</textarea>
+        <div class="invalid-feedback">
+            Please enter a message in the textarea.
+        </div>
+    </div>
+
+
+    <button type="submit" class="btn btn-primary">Save Changes</button>
+</form>
+

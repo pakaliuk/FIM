@@ -1,0 +1,17 @@
+﻿@model IEnumerable<FIM.Models.Topic>
+
+<h1>Topics</h1>
+
+<ul class="list-group">
+    @foreach (var topic in Model)
+    {
+        <li  class="list-group-item list-group-item-action"><a asp-action="GetPostsByTopic" asp-route-id="@topic.Id">@topic.Name - @topic.Id</a> </li>
+
+    }
+
+</ul>
+
+<a class="btn btn-primary col-mb-6"  asp-action="Create"> Add Topic</a>
+
+
+

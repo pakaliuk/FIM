@@ -1,0 +1,16 @@
+﻿@model IEnumerable<FIM.Models.Post>
+
+<h2> Post List  </h2>
+@*<h2> Topic: " @Model.First().Topic.Name "</h2>*@
+<ul class="list-group">
+    @foreach (var post in Model)
+    {
+        
+        <li class="list-group-item list-group-item-action"><a asp-action="GetPostByID" asp-route-postid="@post.Id">@post.PostHeader </a> </li>
+
+    }
+
+</ul>
+
+<a class="btn btn-primary col-mb-6" asp-action="CreatePost" asp-route-topid="@ViewBag.TopId"> Add Post</a>
+

@@ -1,0 +1,10 @@
+﻿
+<div asp-validation-summary="All" class="text-danger"></div>
+
+<form class="was-validated" asp-action="Create" method="post">
+    <div class=" form-group">
+        <label for="name">New Topic</label>
+        <input type="text" class="form-control is-invalid" name="name" aria-describedby="validationServer03Feedback" required />
+    </div>
+    <button type="submit" class="btn btn-primary">Add</button>
+</form>

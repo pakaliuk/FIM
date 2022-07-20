@@ -1,0 +1,20 @@
+﻿@model IEnumerable<FIM.Models.Post>
+
+<h1>@ViewBag.userid Posts: </h1>
+
+<ul class="list-group">
+    @foreach (var post in Model)
+    {
+        <li class="list-group-item list-group-item-action">
+            <div class="d-grid  d-flex">
+                <h4 class="mr-auto   ">@post.PostHeader</h4> 
+                <a class="btn btn-primary " role="button" aria-disabled="true" asp-action="GetPostByID" asp-route-postid="@post.Id">Show </a>
+                <a class="btn btn-secondary  " role="button"  asp-action="EditPostById" asp-route-postid="@post.Id">Edit </a>
+            </div>
+        </li>
+      
+
+
+    }
+
+</ul>
