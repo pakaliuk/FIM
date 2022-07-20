@@ -128,7 +128,7 @@ namespace FIM.Controllers
             FIM.Models.Post post = await _context.Posts.FindAsync(postid);
             if (post!=null)
             {
-                post.PostHeader = "Edited";
+                post.PostHeader = postHeader;
                 post.PostContent = postContent;
                 await _context.SaveChangesAsync();
             }
